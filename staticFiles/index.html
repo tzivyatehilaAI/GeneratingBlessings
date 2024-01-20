@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Blessings</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="scripts.js" defer></script> 
+</head>
+
+<body>
+    <h1>Generating Blessings</h1>
+
+    <div id="selectedValuesContainer"></div> 
+
+
+    <form id="blessingForm">
+        <label for="event">Select Event:</label>
+        <select id="event" name="event">
+            <option value="" disabled selected>Select an Event...</option>
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="Bar Mitzvah">Bar Mitzvah</option>
+        </select>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <div id="spouseNameBlock" style="display: none;">
+            <label for="spouseName">Spouse's Name:</label>
+            <input type="text" id="spouseName" name="spouseName" placeholder="Enter spouse's name">
+        </div>
+
+        <div id="hallBlock" style="display: none;">
+            <label for="hall">Hall:</label>
+            <input type="text" id="hall" name="hall" placeholder="Enter hall">
+        </div>
+
+        <div id="ageBlock" style="display: none;">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+        </div>
+
+        <div id="seasonBlock" style="display: none;">
+            <label for="season">Season:</label>
+            <input type="text" id="season" name="season" placeholder="Enter the season">
+        </div>
+
+        <label for="blessingType">Type of Blessing:</label>
+        <select id="blessingType" name="blessingType">
+            <option value="" disabled selected>Select a type of blessing...</option>
+            <option value="long poem">Long Poem</option>
+            <option value="short poem">Short Poem</option>
+            <option value="letter">Letter</option>
+        </select>
+
+        <label for="atmosphere">Atmosphere:</label>
+        <input type="text" id="atmosphere" name="atmosphere" placeholder="Happy, Entertaining, Funny, etc.">
+
+        <button type="button" onclick="submitForm()">Generate Blessing</button>
+    </form>
+
+
+    <div id="responseContainer">
+    </div>
+
+    <button type="button" id="nextBlessingBtn" style="display: none;" onclick="showNextBlessing()">Give me another
+        blessing</button>
+
+
+</body>
+
+</html>
